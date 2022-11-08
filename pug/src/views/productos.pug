@@ -1,0 +1,19 @@
+html
+    head 
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous")
+        link(rel="stylesheet" href="style.css")
+        title Pug
+    body
+        div(class="container m-5")
+            div(class="d-flex")
+                each producto in productos
+                    div(class="card" style="width: 18rem;")
+                        img(src=producto.imagen class="card-img-top" alt="...")
+                        div(class="card-body")
+                            h5(class="card-title") Producto: !{producto.nombre} 
+                            p(class="card-text") Precio: !{producto.precio}
+            button(class="btn btn-dark")
+                a(class="x" href="/") Ir al formulario

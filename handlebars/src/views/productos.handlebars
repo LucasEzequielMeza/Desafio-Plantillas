@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <div class="d-flex">
+        {{#each productos}}
+        <div class="card" style="width: 18rem;">
+            <img src="{{this.imagen}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Producto: {{this.nombre}}</h5>
+                <p class="card-text">Precio: {{this.precio}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <button class="btn btn-dark"><a id="x" href="/">Ir al formulario</a></button>
+</div>
